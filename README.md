@@ -51,6 +51,6 @@ We have build the vending machine where user can insert a coin and get back the 
 # Items Refund
 ![refunded](https://user-images.githubusercontent.com/76931757/165047636-d13b0ae5-eba9-4432-b0b7-d9e1575fe3b7.png)
 
-# Items refund failed while using same ref. code that the item is already refunded
+`# Items refund failed while using same ref. code that the item is already refunded
 ![refund fail](https://user-images.githubusercontent.com/76931757/165047645-f2de2991-092a-4279-a643-2bc68b14cb28.png)
 
