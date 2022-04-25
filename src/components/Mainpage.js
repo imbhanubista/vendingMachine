@@ -71,7 +71,7 @@ const boxHandle = (data)=>{
         <SimpleGrid columns={3} spacing="6" mt={4} m="10">
         {items.map((data,index)=>{
            return(
-               <Box border={"1px solid"} color={clicked?"Background":""} m="6" p={4}  shadow={"lg"} borderRadius="10" onClick={()=>boxHandle(data.name)}  >
+               <Box border={clicked===data.name?"1px solid green":"AppWorkspace"}  m="6" p={4}  shadow={"lg"} borderRadius="10" onClick={()=>boxHandle(data.name)} cursor="pointer" >
                   <Text fontSize={"25"} > Product Name:<em>{data.name}</em> </Text>
                   <Text mt={2}>Quantity: {data.quantity}</Text>
                   <Text mt={2}>Price: {data.price}</Text>
@@ -80,7 +80,8 @@ const boxHandle = (data)=>{
         })}
     {clicked ===""? "":
      <Box border="1px" m={"10"}p="10" width={"80"} borderRadius="15">
-     <Heading fontSize={"2xl"} mb="4">Item to Purchase</Heading>
+     <Heading fontSize={"2xl"} mb="4">Item to Purchase</Heading> 
+    
         <Divider/>
      {/* form section here */}
      <form onSubmit={handleSubmit(onSubmit)}>
@@ -88,7 +89,7 @@ const boxHandle = (data)=>{
   <Heading fontSize={"3xl"} mb="4" mt={"2"} color="#50B062" >  {clicked} </Heading>
   {/* for Quantity section */}
   <NumberInput  min={1} max={10} mb="4">
-  <NumberInputField type={"number"}  placeholder="Quantity" {...register("quantity")} />
+  <NumberInputField  type={"number"}  placeholder="Quantity" {...register("quantity")} />
   <NumberInputStepper>
       <NumberIncrementStepper/>
       <NumberDecrementStepper/>
