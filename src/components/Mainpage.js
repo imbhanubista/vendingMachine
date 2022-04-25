@@ -1,4 +1,4 @@
-import { border, Box, Center, Divider, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Portal, SimpleGrid, Text } from '@chakra-ui/react'
+import {  Box,Divider,SimpleGrid, Text } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import {Button, FormControl,  Heading, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper, Select } from "@chakra-ui/react";
@@ -58,6 +58,7 @@ const boxHandle = (data)=>{
             position: toast.POSITION.TOP_CENTER,
             autoClose: 8000,
           });
+   getApiData()
           setClicked("")
        }
        console.log(purchaseApi.data)
@@ -96,7 +97,7 @@ const boxHandle = (data)=>{
   </NumberInputStepper>
   </NumberInput>
    {/* for amoutn section */}
-   <NumberInput min={20} max={1000} mb="4">
+   <NumberInput min={5} max={1000} mb="4">
       <NumberInputField type={"number"} placeholder="Amount" {...register("price")} />
       <NumberInputStepper>
           <NumberIncrementStepper/>
